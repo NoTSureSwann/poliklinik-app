@@ -1,4 +1,4 @@
-import 'dart:convert';
+﻿import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 class ApiService {
@@ -25,7 +25,7 @@ class ApiService {
       if (_circuitOpenedAt != null && DateTime.now().difference(_circuitOpenedAt!) > const Duration(minutes: 1)) {
         _circuitOpen = false;
         _failureCount = 0;
-        print("⚡ [CircuitBreaker] State: HALF-OPEN.");
+        print("âš¡ [CircuitBreaker] State: HALF-OPEN.");
         return false;
       }
       return true;
@@ -39,7 +39,7 @@ class ApiService {
     if (_failureCount >= 3 && !_circuitOpen) {
       _circuitOpen = true;
       _circuitOpenedAt = DateTime.now();
-      print("🚨 [CircuitBreaker] State: OPEN. Beralih ke Local Fallback.");
+      print("ðŸš¨ [CircuitBreaker] State: OPEN. Beralih ke Local Fallback.");
     }
   }
 
@@ -88,7 +88,7 @@ class ApiService {
       ];
       _fallbackDb['pembayaran'] = [];
       _isFallbackInitialized = true;
-      print("💽 [Fallback] In-Memory Ephemeral Database Initialized! Data resetted to default.");
+      print("ðŸ’½ [Fallback] In-Memory Ephemeral Database Initialized! Data resetted to default.");
     } catch (e) {
       print("Error init fallback: $e");
     }

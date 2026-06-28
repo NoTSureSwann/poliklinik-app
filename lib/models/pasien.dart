@@ -1,4 +1,4 @@
-class Pasien {
+﻿class Pasien {
   String? id;
   String nama;
   String alamat;

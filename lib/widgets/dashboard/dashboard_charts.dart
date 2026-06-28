@@ -1,14 +1,9 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:poliklinik/theme/app_colors.dart';
 import 'package:poliklinik/theme/app_text_style.dart';
 import 'package:poliklinik/core/responsive/responsive_layout.dart';
-import 'package:provider/provider.dart';
 import 'package:poliklinik/providers/data_provider.dart';
-import 'package:poliklinik/providers/auth_provider.dart';
-import 'package:provider/provider.dart';
-import 'package:poliklinik/providers/data_provider.dart';
-import 'package:poliklinik/providers/auth_provider.dart';
 
 class DashboardCharts extends StatelessWidget {
   const DashboardCharts({Key? key}) : super(key: key);

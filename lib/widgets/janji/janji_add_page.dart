@@ -1,17 +1,7 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 
-import 'package:provider/provider.dart';
-import 'package:poliklinik/providers/data_provider.dart';
-import 'package:poliklinik/providers/auth_provider.dart';
-import 'package:provider/provider.dart';
-import 'package:poliklinik/providers/data_provider.dart';
-import 'package:poliklinik/providers/auth_provider.dart';
-import 'package:provider/provider.dart';
-import 'package:poliklinik/providers/data_provider.dart';
-import 'package:poliklinik/providers/auth_provider.dart';
-import 'package:provider/provider.dart';
 import 'package:poliklinik/providers/data_provider.dart';
 import 'package:poliklinik/providers/auth_provider.dart';
 import 'package:poliklinik/models/janji_temu.dart';

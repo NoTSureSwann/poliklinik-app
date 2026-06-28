@@ -1,10 +1,8 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 // Ensure the provider package is added in your pubspec.yaml dependencies
 import 'package:provider/provider.dart';
 
-import 'package:provider/provider.dart';
 import 'package:poliklinik/providers/data_provider.dart';
-import 'package:poliklinik/providers/auth_provider.dart';
 
 class LaporanPage extends StatefulWidget {
   const LaporanPage({super.key});

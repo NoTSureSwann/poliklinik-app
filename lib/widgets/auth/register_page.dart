@@ -1,8 +1,6 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'package:provider/provider.dart';
-import 'package:poliklinik/providers/data_provider.dart';
 import 'package:poliklinik/providers/auth_provider.dart';
 import 'package:poliklinik/models/user.dart';
 import 'package:poliklinik/widgets/dashboard/dashboard_page.dart';
@@ -36,13 +34,13 @@ class _RegisterPageState extends State<RegisterPage> {
           content: const SingleChildScrollView(
             child: Text(
               'Dengan mendaftar, Anda menyetujui persyaratan dan kebijakan privasi kami yang mengacu pada standar regulasi berikut:\n\n'
-              '• UU ITE (Informasi dan Transaksi Elektronik)\n'
-              '• UU PDP (Pelindungan Data Pribadi)\n'
-              '• UU Permenkes 2025\n'
-              '• OECD (Organisation for Economic Co-operation and Development)\n'
-              '• HIPAA (Health Insurance Portability and Accountability Act)\n'
-              '• WHO (World Health Organization)\n'
-              '• Health Organization International\n\n'
+              'â€¢ UU ITE (Informasi dan Transaksi Elektronik)\n'
+              'â€¢ UU PDP (Pelindungan Data Pribadi)\n'
+              'â€¢ UU Permenkes 2025\n'
+              'â€¢ OECD (Organisation for Economic Co-operation and Development)\n'
+              'â€¢ HIPAA (Health Insurance Portability and Accountability Act)\n'
+              'â€¢ WHO (World Health Organization)\n'
+              'â€¢ Health Organization International\n\n'
               'Data rekam medis dan informasi pribadi Anda akan dienkripsi dan dikelola secara aman.',
               style: TextStyle(height: 1.5, fontSize: 14),
             ),

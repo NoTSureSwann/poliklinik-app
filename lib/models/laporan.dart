@@ -1,4 +1,4 @@
-class Laporan {
+﻿class Laporan {
   String? id;
   String judul;
   String isi;

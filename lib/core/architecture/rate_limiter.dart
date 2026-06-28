@@ -1,4 +1,4 @@
-import 'dart:async';
+﻿import 'dart:async';
 import 'package:flutter/foundation.dart';
 
 /// Implementasi Rate Limiter dan UI Load Balancer sederhana
@@ -21,7 +21,7 @@ class UIArchitectureLimiter {
     if (_throttlers.containsKey(tag)) {
       final lastAction = _throttlers[tag]!;
       if (now.difference(lastAction) < duration) {
-        debugPrint("🛑 [RateLimiter] Aksi '$tag' di-throttle. Menunggu cooldown.");
+        debugPrint("ðŸ›‘ [RateLimiter] Aksi '$tag' di-throttle. Menunggu cooldown.");
         return;
       }
     }

@@ -1,4 +1,4 @@
-import 'dart:math' as math;
+﻿import 'dart:math' as math;
 
 /// Advanced Mathematical and Geometric Utilities
 class DistanceCalculator {

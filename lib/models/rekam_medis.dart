@@ -1,4 +1,4 @@
-class RekamMedis {
+﻿class RekamMedis {
   String? id;
 
   String pasienId;

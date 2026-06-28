@@ -1,14 +1,7 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 // Ensure the provider package is included in your pubspec.yaml file under dependencies
 import 'package:provider/provider.dart';
 
-import 'package:provider/provider.dart';
-import 'package:poliklinik/providers/data_provider.dart';
-import 'package:poliklinik/providers/auth_provider.dart';
-import 'package:provider/provider.dart';
-import 'package:poliklinik/providers/data_provider.dart';
-import 'package:poliklinik/providers/auth_provider.dart';
-import 'package:provider/provider.dart';
 import 'package:poliklinik/providers/data_provider.dart';
 import 'package:poliklinik/providers/auth_provider.dart';
 import 'package:poliklinik/models/rekam_medis.dart';

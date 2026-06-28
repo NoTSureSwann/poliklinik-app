@@ -1,4 +1,4 @@
-class JanjiTemu {
+﻿class JanjiTemu {
   String? id;
 
   String pasienId;

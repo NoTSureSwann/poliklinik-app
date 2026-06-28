@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:provider/provider.dart';
-import 'package:poliklinik/providers/data_provider.dart';
-import 'package:poliklinik/providers/auth_provider.dart';
 import 'package:poliklinik/theme/app_text_style.dart';
+import 'package:poliklinik/providers/auth_provider.dart';
 
 class DashboardHeader extends StatelessWidget {
   const DashboardHeader({Key? key}) : super(key: key);
@@ -33,7 +31,7 @@ class DashboardHeader extends StatelessWidget {
             children: [
               Expanded(
                 child: Text(
-                  'Halo $userName 👋',
+                  'Halo $userName ðŸ‘‹',
                   style: AppTextStyle.heading1.copyWith(color: colorScheme.onPrimaryContainer),
                 ),
               ),

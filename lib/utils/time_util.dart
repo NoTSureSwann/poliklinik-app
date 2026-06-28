@@ -1,4 +1,4 @@
-/// Utility for formatting dates relative to now.
+﻿/// Utility for formatting dates relative to now.
 class TimeUtil {
   static String timeAgo(DateTime timestamp) {
     final now = DateTime.now();

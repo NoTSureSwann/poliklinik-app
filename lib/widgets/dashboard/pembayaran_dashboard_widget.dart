@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 import 'package:poliklinik/theme/app_colors.dart';
 import 'package:poliklinik/theme/app_text_style.dart';

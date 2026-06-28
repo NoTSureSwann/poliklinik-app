@@ -1,4 +1,4 @@
-class Dokter {
+﻿class Dokter {
   String? id;
   String nama;
   String spesialis;

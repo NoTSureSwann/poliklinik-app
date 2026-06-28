@@ -1,4 +1,4 @@
-class Poli {
+﻿class Poli {
   String id;
   String nama;
   String deskripsi;

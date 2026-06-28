@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 
 class AppColors {
   static const Color primary = Color(0xFF0EA5E9); // Sky Blue

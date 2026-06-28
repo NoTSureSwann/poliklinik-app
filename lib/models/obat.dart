@@ -1,4 +1,4 @@
-class Obat {
+﻿class Obat {
   String? id;
   String nama;
   String kategori;

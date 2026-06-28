@@ -8,7 +8,6 @@ import '../cqrs/query/dashboard_query.dart';
 import '../models/janji_temu.dart';
 import '../models/dokter.dart';
 import '../models/pasien.dart';
-import '../models/rekam_medis.dart';
 import '../models/pembayaran.dart';
 import '../models/obat.dart';
 import '../models/poli.dart';
@@ -27,10 +26,10 @@ class DataProvider extends ChangeNotifier {
   Map<String, dynamic> _dashboardStats = {};
   
   // Legacy / Missing models arrays to satisfy UI compilation
-  List<dynamic> _rekamList = [];
-  List<Pembayaran> _pembayaranList = [];
-  List<Obat> _obatList = [];
-  List<Poli> _poliList = [];
+  final List<dynamic> _rekamList = [];
+  final List<Pembayaran> _pembayaranList = [];
+  final List<Obat> _obatList = [];
+  final List<Poli> _poliList = [];
 
   bool _isLoading = false;
   String? _error;

@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import '../screens/splash_screen.dart';
 import '../widgets/auth/login_page.dart';
 import '../widgets/dashboard/dashboard_page.dart';

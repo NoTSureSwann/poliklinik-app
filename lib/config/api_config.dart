@@ -1,4 +1,4 @@
-class ApiConfig {
+﻿class ApiConfig {
   static const String baseUrl1 = "https://6a3bfde1e4a07f202e164805.mockapi.io/api/v1";
   static const String baseUrl2 = "https://6a3bffdee4a07f202e164a7d.mockapi.io/api/v1";
   static const String baseUrl3 = "https://6a3c0117e4a07f202e164c6b.mockapi.io/api/v1";

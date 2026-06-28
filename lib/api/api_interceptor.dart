@@ -1,4 +1,4 @@
-import 'package:http/http.dart' as http;
+﻿import 'package:http/http.dart' as http;
 
 abstract class ApiInterceptor {
   Future<http.Request> interceptRequest(http.Request request);

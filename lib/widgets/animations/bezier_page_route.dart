@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 
 /// Implements Custom Cubic Bezier Curve logic for ultra-smooth UI transitions
 class BezierPageRoute<T> extends PageRouteBuilder<T> {

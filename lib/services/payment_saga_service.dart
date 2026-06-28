@@ -1,4 +1,4 @@
-import 'dart:async';
+﻿import 'dart:async';
 
 class SagaPaymentResult {
   final bool success;
@@ -14,7 +14,7 @@ class PaymentSagaService {
   
   /// Memproses pembayaran dengan metode SAGA dan Atomic Transaction
   static Future<SagaPaymentResult> processPayment({required double amount}) async {
-    print("🔄 [Saga] Memulai Transaksi Atomic (Total: Rp $amount)");
+    print("ðŸ”„ [Saga] Memulai Transaksi Atomic (Total: Rp $amount)");
     
     // Step 1: Debit Account A (Pasien)
     bool step1Success = await _debitPasien(amount);
@@ -26,7 +26,7 @@ class PaymentSagaService {
     bool step2Success = await _creditKlinik(amount);
     if (!step2Success) {
       // Compensating Action (Rollback Step 1)
-      print("⚠️ [Saga] Step 2 Gagal. Menjalankan Compensating Action...");
+      print("âš ï¸ [Saga] Step 2 Gagal. Menjalankan Compensating Action...");
       await _rollbackDebitPasien(amount);
       return SagaPaymentResult(false, "Gagal mengkredit sistem klinik. Saldo pasien telah dikembalikan.");
     }
@@ -35,13 +35,13 @@ class PaymentSagaService {
     bool step3Success = await _updateLedger(amount);
     if (!step3Success) {
        // Compensating Action (Rollback Step 1 and 2)
-       print("⚠️ [Saga] Step 3 Gagal. Menjalankan Full Rollback...");
+       print("âš ï¸ [Saga] Step 3 Gagal. Menjalankan Full Rollback...");
        await _rollbackCreditKlinik(amount);
        await _rollbackDebitPasien(amount);
        return SagaPaymentResult(false, "Gagal mencatat ledger. Transaksi dibatalkan sepenuhnya (Rolled back).");
     }
     
-    print("✅ [Saga] Transaksi Selesai. Ledger Updated. Saldo Klinik: Rp $balanceKlinik");
+    print("âœ… [Saga] Transaksi Selesai. Ledger Updated. Saldo Klinik: Rp $balanceKlinik");
     return SagaPaymentResult(true, "Pembayaran berhasil diproses secara atomik!");
   }
   

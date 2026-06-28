@@ -1,4 +1,4 @@
-import 'dart:async';
+﻿import 'dart:async';
 
 /// Representasi sebuah event / message dalam arsitektur Event-Driven
 class AppEvent {
@@ -20,7 +20,7 @@ class EventBus {
   /// Mempublish sebuah event ke seluruh subscriber
   void publish(AppEvent event) {
     _controller.sink.add(event);
-    print("🔔 [EventBus] Dispatched Event: ${event.name}");
+    print("ðŸ”” [EventBus] Dispatched Event: ${event.name}");
   }
 
   /// Subscribe ke event tertentu (opsional dengan memfilter nama event)
