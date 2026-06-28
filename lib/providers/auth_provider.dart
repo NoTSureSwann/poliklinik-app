@@ -1,8 +1,9 @@
-﻿import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import '../cqrs/command/auth_command.dart';
 import '../api/api_result.dart';
+import '../models/user.dart' as app_model;
 
 class AuthProvider extends ChangeNotifier {
   final AuthCommandHandler _authCommand;
@@ -13,6 +14,7 @@ class AuthProvider extends ChangeNotifier {
   String? _role;
   String? _username;
   String? _error;
+  app_model.User? _currentUser;
 
   AuthProvider(this._authCommand) {
     _loadSession();
@@ -25,9 +27,35 @@ class AuthProvider extends ChangeNotifier {
   String? get username => _username;
   String? get error => _error;
   
-  // Stubs for UI compilation
-  dynamic get currentUser => {'role': _role, 'name': _username};
-  Future<void> updateProfile(dynamic user) async {}
+  /// Returns a proper User object so widgets can access .role, .name, etc.
+  app_model.User? get currentUser => _currentUser;
+
+  Future<void> updateProfile(dynamic user) async {
+    if (user is app_model.User) {
+      _currentUser = user;
+      _username = user.name;
+      _role = user.role;
+
+      final prefs = await SharedPreferences.getInstance();
+      await prefs.setString('auth_username', _username!);
+      await prefs.setString('auth_role', _role!);
+      notifyListeners();
+    }
+  }
+
+  void _rebuildCurrentUser() {
+    if (_isAuthenticated && _username != null) {
+      final email = _username!.contains('@') ? _username! : '$_username@klinik.com';
+      _currentUser = app_model.User(
+        name: _username ?? 'Pengguna',
+        email: email,
+        password: '',
+        role: _role ?? 'pasien',
+      );
+    } else {
+      _currentUser = null;
+    }
+  }
 
   Future<void> _loadSession() async {
     final prefs = await SharedPreferences.getInstance();
@@ -38,6 +66,7 @@ class AuthProvider extends ChangeNotifier {
     if (_token != null && _token!.isNotEmpty) {
       _isAuthenticated = true;
     }
+    _rebuildCurrentUser();
     notifyListeners();
   }
 
@@ -87,6 +116,7 @@ class AuthProvider extends ChangeNotifier {
       _error = (result as ApiFailure).message;
     }
 
+    _rebuildCurrentUser();
     _isLoading = false;
     notifyListeners();
     return success;
@@ -139,6 +169,7 @@ class AuthProvider extends ChangeNotifier {
       _error = (result as ApiFailure).message;
     }
 
+    _rebuildCurrentUser();
     _isLoading = false;
     notifyListeners();
     return success;
@@ -149,6 +180,7 @@ class AuthProvider extends ChangeNotifier {
     _token = null;
     _role = null;
     _username = null;
+    _currentUser = null;
 
     final prefs = await SharedPreferences.getInstance();
     await prefs.remove('auth_token');
