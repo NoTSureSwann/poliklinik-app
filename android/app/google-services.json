@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "690427649630",
+    "project_id": "poliklinik-app-2fc36",
+    "storage_bucket": "poliklinik-app-2fc36.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:690427649630:android:37be10280b94aadfbd1ecf",
+        "android_client_info": {
+          "package_name": "com.example.poliklinik"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCT2g3z-lwhM_oEa15SRFK5GJwlgSkDSJg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,35 @@
+name: poliklinik
+description: Sistem Informasi Poliklinik
+
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  provider: any
+  dio: any
+  intl: any
+  pdf: any
+  printing: any
+  responsive_builder: any
+  google_fonts: any
+  qr_flutter: any
+  flutter_map: any
+  latlong2: any
+  shared_preferences: ^2.5.3
+  firebase_core: ^4.11.0
+  firebase_auth: ^6.5.4
+  cloud_firestore: ^6.6.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
