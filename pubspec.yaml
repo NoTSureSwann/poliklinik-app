@@ -6,7 +6,7 @@ publish_to: "none"
 version: 1.0.0+1
 
 environment:
-  sdk: ">=3.0.0 <4.0.0"
+  sdk: ">=2.18.0 <4.0.0"
 
 dependencies:
   flutter:
@@ -21,10 +21,10 @@ dependencies:
   qr_flutter: any
   flutter_map: any
   latlong2: any
-  shared_preferences: ^2.5.3
-  firebase_core: ^4.11.0
-  firebase_auth: ^6.5.4
-  cloud_firestore: ^6.6.0
+  shared_preferences: any
+  firebase_core: any
+  firebase_auth: any
+  cloud_firestore: any
 
 dev_dependencies:
   flutter_test:
